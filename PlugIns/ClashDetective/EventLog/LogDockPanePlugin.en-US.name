@@ -1,0 +1,40 @@
+﻿# This file uses UTF8 encoding. Lines starting with # or $, or ending with =
+# do NOT need translating.
+#
+# create a folder "en-US" in the "Plugins\ClashEventViewer" folder
+# copy this file to this folder and rename it "LogDockPanePlugin.name"
+#
+$utf8
+
+DisplayName=
+Clash Event Viewer Plugin
+
+UserComment=
+User Comment
+
+LoggingFor=
+Logging for
+
+ViewpointChanged=
+Viewpoint changed.
+
+Transaction=
+Transaction
+
+DocumentAdded=
+Document added
+
+MainDocumentChanged=
+MainDocument changed.
+
+TestDataChangedFormat=
+Item {0} Action={1}
+
+UserCommentToolTip=
+Enter a user comment to annotate the log.
+
+ClearToolTip=
+Click to clear the log.
+
+AddCommentToolTip=
+Click to add the user comment to the log.

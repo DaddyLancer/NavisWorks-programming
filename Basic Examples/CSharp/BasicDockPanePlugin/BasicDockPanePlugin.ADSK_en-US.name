@@ -1,0 +1,12 @@
+﻿# This file uses UTF8 encoding. Lines starting with # or $, or ending with =
+# do NOT need translating.
+$utf8
+
+DisplayName=
+BasicDockPanePlugin
+
+Tooltip=
+Shows/hides the Basic Doc Pane Plug-in
+
+HelloWorldText=
+Hello World

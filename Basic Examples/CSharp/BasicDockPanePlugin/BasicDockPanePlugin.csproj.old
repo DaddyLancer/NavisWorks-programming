@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5C148D58-1FB3-4351-BA3F-81C3863B6388}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BasicDockPanePlugin</RootNamespace>
+    <AssemblyName>BasicDockPanePlugin.ADSK</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/BasicDockPanePlugin.ADSK/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autodesk.Navisworks.Api">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CAD\Navisworks Manage 2016\Autodesk.Navisworks.Api.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicDockPaneAddin.cs" />
+    <Compile Include="BasicDockPanePlugin.cs" />
+    <Compile Include="HelloWorldControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HelloWorldControl.Designer.cs">
+      <DependentUpon>HelloWorldControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HelloWorldControl.resx">
+      <DependentUpon>HelloWorldControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BasicDockPanePlugin.ADSK_de-DE.name" />
+    <None Include="BasicDockPanePlugin.ADSK_en-US.name" />
+    <None Include="BasicDockPanePlugin.ADSK_es-ES.name" />
+    <None Include="BasicDockPanePlugin.ADSK_fr-FR.name" />
+    <None Include="BasicDockPanePlugin.ADSK_it-IT.name" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>IF EXIST "$(ProjectDir)..\..\..\..\..\..\Plugins\$(TargetName)\" rmdir /S /Q "$(ProjectDir)..\..\..\..\..\..\Plugins\$(TargetName)\"
+xcopy /Y "$(TargetDir)*.*" "$(ProjectDir)..\..\..\..\..\..\Plugins\$(TargetName)\"
+
+mkdir "$(ProjectDir)..\..\..\..\..\..\Plugins\$(TargetName)\en-US
+copy /Y "$(ProjectDir)$(TargetName)_en-US.name" "$(ProjectDir)..\..\..\..\..\..\Plugins\$(TargetName)\en-US\$(TargetName).name"
+
+mkdir "$(ProjectDir)..\..\..\..\..\..\Plugins\$(TargetName)\de-DE
+copy /Y "$(ProjectDir)$(TargetName)_de-DE.name" "$(ProjectDir)..\..\..\..\..\..\Plugins\$(TargetName)\de-DE\$(TargetName).name"
+
+mkdir "$(ProjectDir)..\..\..\..\..\..\Plugins\$(TargetName)\es-ES
+copy /Y "$(ProjectDir)$(TargetName)_es-ES.name" "$(ProjectDir)..\..\..\..\..\..\Plugins\$(TargetName)\es-ES\$(TargetName).name"
+
+mkdir "$(ProjectDir)..\..\..\..\..\..\Plugins\$(TargetName)\fr-FR
+copy /Y "$(ProjectDir)$(TargetName)_fr-FR.name" "$(ProjectDir)..\..\..\..\..\..\Plugins\$(TargetName)\fr-FR\$(TargetName).name"
+
+mkdir "$(ProjectDir)..\..\..\..\..\..\Plugins\$(TargetName)\it-IT
+copy /Y "$(ProjectDir)$(TargetName)_it-IT.name" "$(ProjectDir)..\..\..\..\..\..\Plugins\$(TargetName)\it-IT\$(TargetName).name"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

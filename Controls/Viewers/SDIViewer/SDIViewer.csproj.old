@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1BBA2E32-CC03-4736-A1EC-66CE08448CDE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SDIViewer</RootNamespace>
+    <AssemblyName>SDIViewer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/SDIViewer/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autodesk.Navisworks.Api">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CAD\Navisworks Manage 2016\Autodesk.Navisworks.Api.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Autodesk.Navisworks.Controls">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\CAD\Navisworks Manage 2016\Autodesk.Navisworks.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\ApplicationControlProperties.cs">
+      <Link>ApplicationControlProperties.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\ApplicationControlProperties.designer.cs">
+      <Link>ApplicationControlProperties.designer.cs</Link>
+      <DependentUpon>ApplicationControlProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\PublishOptions.cs">
+      <Link>PublishOptions.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\PublishOptions.designer.cs">
+      <Link>PublishOptions.designer.cs</Link>
+      <DependentUpon>PublishOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\SearchSelect.cs">
+      <Link>SearchSelect.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\SearchSelect.designer.cs">
+      <Link>SearchSelect.designer.cs</Link>
+      <DependentUpon>SearchSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\SelectionSetItemNameForm.cs">
+      <Link>SelectionSetItemNameForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\SelectionSetItemNameForm.designer.cs">
+      <Link>SelectionSetItemNameForm.designer.cs</Link>
+      <DependentUpon>SelectionSetItemNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\SelectionSetsForm.cs">
+      <Link>SelectionSetsForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\SelectionSetsForm.designer.cs">
+      <Link>SelectionSetsForm.designer.cs</Link>
+      <DependentUpon>SelectionSetsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SDIViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SDIViewer.Designer.cs">
+      <DependentUpon>SDIViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="..\ApplicationControlProperties.resx">
+      <Link>ApplicationControlProperties.resx</Link>
+      <DependentUpon>ApplicationControlProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\PublishOptions.resx">
+      <Link>PublishOptions.resx</Link>
+      <DependentUpon>PublishOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SearchSelect.resx">
+      <Link>SearchSelect.resx</Link>
+      <DependentUpon>SearchSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SelectionSetItemNameForm.resx">
+      <Link>SelectionSetItemNameForm.resx</Link>
+      <DependentUpon>SelectionSetItemNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SelectionSetsForm.resx">
+      <Link>SelectionSetsForm.resx</Link>
+      <DependentUpon>SelectionSetsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SDIViewer.resx">
+      <DependentUpon>SDIViewer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Tools\AppInfo\AppInfo.csproj">
+      <Project>{69EEAB78-9453-4291-BDBD-E4DDA8214462}</Project>
+      <Name>AppInfo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
